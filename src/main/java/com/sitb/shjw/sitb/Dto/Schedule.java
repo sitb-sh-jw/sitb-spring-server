@@ -17,6 +17,7 @@ public class Schedule {
     private String title;
     private Date start_time;
     private Date end_time;
+    private String Location;
     private String memo;
 
     @ManyToOne // Many = Board, User = One 한명의 유저는 여러개의 게시글을 쓸 수 있다.
