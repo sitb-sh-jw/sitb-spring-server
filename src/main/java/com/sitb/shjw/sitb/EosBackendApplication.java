@@ -1,0 +1,13 @@
+package com.sitb.shjw.sitb;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class EosBackendApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EosBackendApplication.class, args);
+	}
+
+}
