@@ -15,5 +15,4 @@ public class ScheduleWeekResponse {
     private List<ScheduleResponse> friday;
     private List<ScheduleResponse> saturday;
     private List<ScheduleResponse> sunday;
-
 }

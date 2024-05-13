@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -19,7 +21,14 @@ public class ScheduleController {
     private ScheduleRepository scheduleRepository;
 
     @GetMapping("/week/{s_date}")
-    public ScheduleWeekResponse getWeekScheduleByUserId(@RequestHeader("uid") Long uid, @PathVariable("s_date") Date sDate) {
+    public ScheduleWeekResponse getWeekScheduleByUserId(@RequestHeader("uid") Long uid, @PathVariable("s_date") String stringDate) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date sDate;
+        try {
+            sDate = sdf.parse(stringDate);
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
         List<Schedule> scheduleList = scheduleRepository.findByUserIdWithConditions(uid, sDate);
 
         if (scheduleList == null || scheduleList.isEmpty()) {
