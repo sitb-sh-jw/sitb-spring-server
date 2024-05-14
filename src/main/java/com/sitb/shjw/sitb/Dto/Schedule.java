@@ -27,5 +27,10 @@ public class Schedule {
     @ManyToOne
     @JoinColumn(name="cid")
     private Category category;
+
+    @Override
+    public String toString() {
+        return id.toString() + " " + title + " " + start_time + " " + end_time + " " + Location + " " + memo;
+    }
 }
 
