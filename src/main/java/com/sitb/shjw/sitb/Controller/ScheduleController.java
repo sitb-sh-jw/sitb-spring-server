@@ -44,6 +44,7 @@ public class ScheduleController {
             for (Schedule schedule : scheduleList) {
                 Category category = schedule.getCategory();
                 ScheduleResponse scheduleResponse = new ScheduleResponse(schedule.getTitle(), category.getName(), category.getColor(), schedule.getStart_time(), schedule.getEnd_time(), schedule.getLocation(), schedule.getMemo());
+                System.out.println(scheduleResponse);
                 if (schedule.getStart_time().getDay() == sDate.getDay()) {
                     List<ScheduleResponse> mondayScheduleList = scheduleWeekResponse.getMonday();
                     if (mondayScheduleList == null || mondayScheduleList.isEmpty()) {

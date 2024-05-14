@@ -25,4 +25,9 @@ public class ScheduleResponse {
         this.location = location;
         this.memo = memo;
     }
+
+    @Override
+    public String toString() {
+        return "ScheduleResponse [title=" + title + ", category=" + category + ", category_color=" + category_color + ", start_time=" + start_time + ", end_time=" + end_time + ", location=" + location + ", memo=" + memo + "]";
+    }
 }
