@@ -31,6 +31,7 @@ public class ScheduleController {
             throw new RuntimeException(e);
         }
         List<Schedule> scheduleList = scheduleRepository.findByUserIdWithConditions(uid, sDate);
+        System.out.println(scheduleList);
 
         if (scheduleList == null || scheduleList.isEmpty()) {
             return null;
