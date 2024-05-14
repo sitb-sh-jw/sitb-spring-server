@@ -15,4 +15,9 @@ public class ScheduleWeekResponse {
     private List<ScheduleResponse> friday;
     private List<ScheduleResponse> saturday;
     private List<ScheduleResponse> sunday;
+
+    @Override
+    public String toString() {
+        return "ScheduleWeekResponse [monday=" + monday + ", tuesday=" + tuesday + ", wednesday=" + wednesday + ", thursday=" + thursday + ", friday=" + friday + ", saturday=" + saturday + ", sunday=" + sunday + "]";
+    }
 }
