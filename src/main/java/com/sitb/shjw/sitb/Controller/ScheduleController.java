@@ -62,7 +62,7 @@ public class ScheduleController {
                         tuesdayScheduleList = new ArrayList<>();
                     }
                     tuesdayScheduleList.add(scheduleResponse);
-                    scheduleWeekResponse.setMonday(tuesdayScheduleList);
+                    scheduleWeekResponse.setTuesday(tuesdayScheduleList);
                 } else if (schedule.getStart_time().getDay() == sDate.getDay()+2) {
                     System.out.println("wednesday");
                     List<ScheduleResponse> wednesdayScheduleList = scheduleWeekResponse.getWednesday();
@@ -70,7 +70,7 @@ public class ScheduleController {
                         wednesdayScheduleList = new ArrayList<>();
                     }
                     wednesdayScheduleList.add(scheduleResponse);
-                    scheduleWeekResponse.setMonday(wednesdayScheduleList);
+                    scheduleWeekResponse.setWednesday(wednesdayScheduleList);
                 } else if (schedule.getStart_time().getDay() == sDate.getDay()+3) {
                     System.out.println("thursday");
                     List<ScheduleResponse> thursdayScheduleList = scheduleWeekResponse.getThursday();
@@ -78,7 +78,7 @@ public class ScheduleController {
                         thursdayScheduleList = new ArrayList<>();
                     }
                     thursdayScheduleList.add(scheduleResponse);
-                    scheduleWeekResponse.setMonday(thursdayScheduleList);
+                    scheduleWeekResponse.setThursday(thursdayScheduleList);
                 } else if (schedule.getStart_time().getDay() == sDate.getDay()+4) {
                     System.out.println("friday");
                     List<ScheduleResponse> fridayScheduleList = scheduleWeekResponse.getFriday();
@@ -86,7 +86,7 @@ public class ScheduleController {
                         fridayScheduleList = new ArrayList<>();
                     }
                     fridayScheduleList.add(scheduleResponse);
-                    scheduleWeekResponse.setMonday(fridayScheduleList);
+                    scheduleWeekResponse.setFriday(fridayScheduleList);
                 } else if (schedule.getStart_time().getDay() == sDate.getDay()+5) {
                     System.out.println("saturday");
                     List<ScheduleResponse> saturdayScheduleList = scheduleWeekResponse.getSaturday();
@@ -94,7 +94,7 @@ public class ScheduleController {
                         saturdayScheduleList = new ArrayList<>();
                     }
                     saturdayScheduleList.add(scheduleResponse);
-                    scheduleWeekResponse.setMonday(saturdayScheduleList);
+                    scheduleWeekResponse.setSaturday(saturdayScheduleList);
                 } else if (schedule.getStart_time().getDay() == sDate.getDay()+6) {
                     System.out.println("sunday");
                     List<ScheduleResponse> sundayScheduleList = scheduleWeekResponse.getSunday();
@@ -102,7 +102,7 @@ public class ScheduleController {
                         sundayScheduleList = new ArrayList<>();
                     }
                     sundayScheduleList.add(scheduleResponse);
-                    scheduleWeekResponse.setMonday(sundayScheduleList);
+                    scheduleWeekResponse.setSunday(sundayScheduleList);
                 }
                 System.out.println(scheduleWeekResponse);
             }
